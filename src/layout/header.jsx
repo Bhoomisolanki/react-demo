@@ -1,3 +1,7 @@
+import { NavLink } from "react-router-dom";
+
+
+
 function Header() {
  
 return (
@@ -6,11 +10,14 @@ return (
         <h1 style={{ color: "#fff", margin: 0, fontSize: "1.5rem" }}>React Demo</h1>
         <ul style={{ display: "flex", listStyle: "none", marginLeft: "2rem", padding: 0 }}>
             <li style={{ marginRight: "1.5rem" }}>
-                <a href="/" style={{ color: "#fff", textDecoration: "none" }}>Home</a>
-            </li> 
+                <NavLink to="/" style={{ color: "#fff", textDecoration: "none" }}>Home</NavLink>
+            </li>
             <li style={{ marginRight: "1.5rem" }}>
-                <a href="/users/userList" style={{ color: "#fff", textDecoration: "none" }}>Users</a>
-            </li>           
+               <NavLink to="/about" style={{ color: "#fff", textDecoration: "none" }}>About</NavLink>
+            </li>
+            <li>
+                <NavLink to="/users" style={{ color: "#fff", textDecoration: "none" }}>Users</NavLink>
+            </li>
         </ul>
     </nav>
     </>
